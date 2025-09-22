@@ -1,3 +1,4 @@
+import Dashboard from "../common/components/Dashboard";
 import HomePage from "../common/pages/HomePage"
 const DashboardRoute=[
     {
@@ -5,8 +6,9 @@ const DashboardRoute=[
         element:<HomePage/>,
         children:[
             {
-                index:true,
-                element:<HomePage/>
+                index: true,
+                element:<Dashboard/>
+               
             },
             
         ]

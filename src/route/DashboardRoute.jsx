@@ -1,5 +1,6 @@
 import Dashboard from "../common/components/Dashboard";
 import HomePage from "../common/pages/HomePage"
+import roomRoute from "./roomRoute";
 const DashboardRoute=[
     {
         path:"/dashboard",
@@ -10,6 +11,7 @@ const DashboardRoute=[
                 element:<Dashboard/>
                
             },
+            ...roomRoute,
             
         ]
     }

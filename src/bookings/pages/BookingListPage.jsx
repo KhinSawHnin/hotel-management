@@ -1,13 +1,12 @@
 import React from 'react'
-import RoomsList from '../components/RoomsList'
+import BookingList from '../components/BookingList'
 import Container from '../../common/components/Container'
 
-const RoomsListPage = () => {
+const BookingListPage = () => {
   return (
-  
-    <section>
+   <section>
       <Container>
-          <RoomsList/>
+          <BookingList/>
 
       </Container>
        
@@ -15,4 +14,4 @@ const RoomsListPage = () => {
   )
 }
 
-export default RoomsListPage
+export default BookingListPage

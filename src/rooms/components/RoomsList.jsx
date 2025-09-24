@@ -55,8 +55,8 @@ const RoomsList = () => {
   };
   return (
     <>
-      <div className="p-8 w-full  ">
-        <h1 className="text-2xl font-medium font-serif hover:text-red-500   "
+      <div className="p-4 w-full  ">
+        <h1 className="text-2xl font-medium font-serif hover:text-red-500 pb-4  "
 >
           Room Overview
         </h1>
@@ -64,7 +64,7 @@ const RoomsList = () => {
           {floors.map((floor, index) => (
             <div key={floor} className="flex items-center gap-4">
               <div className="w-24 font-semibold text-right">{floor}</div>
-              <div className="grid grid-cols-10 gap-2">
+              <div className="grid grid-cols-10 gap-2 py-3">
                 {rooms[index].map((roomId) => {
                   const status = getRoomStatus(roomId);
                   return (

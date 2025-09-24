@@ -1,18 +1,16 @@
 import React from 'react'
-import RoomsList from '../components/RoomsList'
+import BalanceSheet from '../components/BalanceSheet'
 import Container from '../../common/components/Container'
 
-const RoomsListPage = () => {
+const BalanceSheetPage = () => {
   return (
-  
-    <section>
+     <section>
       <Container>
-          <RoomsList/>
-
+          <BalanceSheet/>
       </Container>
        
     </section>
   )
 }
 
-export default RoomsListPage
+export default BalanceSheetPage

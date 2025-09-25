@@ -55,32 +55,34 @@ const RoomsList = () => {
   };
   return (
     <>
-      <div className="p-4 w-full  ">
-        <h1 className="text-2xl font-medium font-serif hover:text-red-500 pb-4  "
->
-          Room Overview
-        </h1>
-        <div className=" bg-white shadow-2xl py-5 ">
-          {floors.map((floor, index) => (
-            <div key={floor} className="flex items-center gap-4">
-              <div className="w-24 font-semibold text-right">{floor}</div>
-              <div className="grid grid-cols-10 gap-2 py-3">
-                {rooms[index].map((roomId) => {
-                  const status = getRoomStatus(roomId);
-                  return (
-                    <div
-                      key={roomId}
-                      className={`w-16 h-12 rounded px-3 py-2 text-center font-medium shadow flex items-center justify-center ${statusColors[status]}`}
-                    >
-                      {roomId}
-                    </div>
-                  );
-                })}
-              </div>
+     <div className="p-4 w-full">
+ <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-medium font-serif hover:text-red-500 pb-4 ">
+    Room Overview
+  </h1>
+<div className="bg-white shadow-2xl py-5 px-4 sm:px-6 lg:px-8 3xl:px-16 max-w-[1920px] mx-auto rounded-lg">
+  {floors.map((floor, index) => (
+    <div key={floor} className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-4">
+      <div className="w-full md:w-24 font-semibold text-left md:text-right">{floor}</div>
+
+      <div className="grid grid-cols-5 sm:grid-cols-10 gap-2 py-3 w-full">
+        {rooms[index].map((roomId) => {
+          const status = getRoomStatus(roomId);
+          return (
+            <div
+              key={roomId}
+              className={`h-10 md:h-12 lg:h-14 rounded px-2 py-2 text-center font-medium shadow flex items-center justify-center ${statusColors[status]}`}
+            >
+              {roomId}
             </div>
-          ))}
-        </div>
+          );
+        })}
       </div>
+    </div>
+  ))}
+</div>
+
+  </div>
+
     </>
   );
 };
